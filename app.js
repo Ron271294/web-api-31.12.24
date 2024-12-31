@@ -9,12 +9,9 @@ app.use(morgan('dev'));//הוספת השכבה של מורגן - middleware
 app.use(express.json());//הוספת שכבה שמטפלת בבקשות מסוג גייסון
 app.use(express.urlencoded({extended:true}));//הוספת שכבה שמטפלת בבקשות שנשלחו
 
-
-
+ console.log(process.env.GOOGLE_USER);
 const secure=require(`./api/v1/middlewares/secure`);
-app.use(secure);///
-
-   
+app.use(secure);
 app.use('/product',productRauter);//שילוב הראוטר כחלק מהפליקציה
 
 module.exports=app;
