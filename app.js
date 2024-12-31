@@ -11,8 +11,8 @@ app.use(express.urlencoded({extended:true}));//הוספת שכבה שמטפלת 
 
 
 
-//const secure=require(`./api/v1/middlewares/secure`);
-//app.use(secure);///
+const secure=require(`./api/v1/middlewares/secure`);
+app.use(secure);///
 
    
 app.use('/product',productRauter);//שילוב הראוטר כחלק מהפליקציה
